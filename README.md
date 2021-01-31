@@ -11,7 +11,7 @@ simple to use for any other automated systems demanding both classification and 
 The pre-trained weight must exist as `resnet_weights.h5` and  `xception_weights.h5` in the path where `main.py` is located. pre-trained weight can be downloaded at https://drive.google.com/drive/folders/1E8x43bGvKinJRwiTPb-A6eOr9pMvvxDi.
 ## Model summary
 
-![fig4](https://user-images.githubusercontent.com/71325306/105945522-c624ba00-60a8-11eb-9dba-3947b527a1eb.png)
+![fig4](https://user-images.githubusercontent.com/71325306/106382944-3b282480-6406-11eb-81c7-1393a09fe952.png)
   
 our models were implemented by **tensorflow 2.3** and **keras**
 
