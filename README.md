@@ -10,7 +10,7 @@ or post processing step, implementing segmentation of beef eye-muscle area and e
 The pre-trained weight must exist as `resnet_weights.h5` and  `xception_weights.h5` in the path where `main.py` is located. pre-trained weight can be downloaded at https://drive.google.com/drive/folders/1E8x43bGvKinJRwiTPb-A6eOr9pMvvxDi.
 ## Model summary
 
-![fig4](https://user-images.githubusercontent.com/71325306/106382944-3b282480-6406-11eb-81c7-1393a09fe952.png)
+![AnyConv com__fig4](https://user-images.githubusercontent.com/71325306/109612220-b817fc80-7b72-11eb-81d8-d436edbb0b0a.png)
   
 our models were implemented by **tensorflow 2.3** and **keras**
 
@@ -45,4 +45,4 @@ and test set contain 1,024 images.
 |Bridge-ResNet50|99.7%|0.973 |
 |Bridge-Xception|99.8%|0.973 |
 
-![fig9](https://user-images.githubusercontent.com/71325306/105946387-865ed200-60aa-11eb-8452-eb0b51f2db5f.png)
+![AnyConv com__fig7](https://user-images.githubusercontent.com/71325306/109612244-c1a16480-7b72-11eb-807b-cfd8bb05f3fa.png)
