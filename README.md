@@ -1,11 +1,10 @@
-# Bridge connection for Beef MS estimation
+# MSENet: Bridge connected Network for beef marbling score estimation and eye-muscle area segmentation
 
  
 ## Object
 
-We proposed the bridge connection for end-to-end networks without any pre
-or post processing step, implementing segmentation of beef eye-muscle area and estimation of MS. In particular, the bridge connection interlink a classification network and segmentation network, transforming the segmentation information to classification networks for way to improve the classification performance. We applied it to connect U-Net with ResNet50 and Xception for automated beef MS grading. In addition, bridge connection is also
-simple to use for any other automated systems demanding both classification and segmentation task since it doesn’t need to create a new deep learning network but simply combines two existing networks.
+We proposed the MSENet for end-to-end networks without any pre
+or post processing step, implementing segmentation of beef eye-muscle area and estimation of marblingscore.In particular, the bridge block in the MSENet interlinks a scoring module and segmentation module, trans-forming the segmentation information to scoring module for way to improve the estimation performance. We applied it to connect segmentation module with ResNet50 and Xception for automated beef MS grading. Bridge block is also simple to use for any other automated systems demanding both classification and segmentation task since it doesn’t need to create a new deep learning network but simply combines two existing networks.
 
 ##  Installation
 The pre-trained weight must exist as `resnet_weights.h5` and  `xception_weights.h5` in the path where `main.py` is located. pre-trained weight can be downloaded at https://drive.google.com/drive/folders/1E8x43bGvKinJRwiTPb-A6eOr9pMvvxDi.
@@ -17,18 +16,18 @@ our models were implemented by **tensorflow 2.3** and **keras**
 
  #### Model summary
 
-1. This model was based on ResNet50 and Xception.
+1. This model is end-to-end networks for eye-muscle area segmentation and marbling score estimation.
 
-2. This model is end-to-end networks for segmentation and classification.
+2. MSENet-ResNet50 designed by ResNet50 (He et al., 2016) for the scoring module, while MSENet-Xception use Xception (Chollet, 2017).
 
 3. Model code can be found in `model.py`.
 
-####   Execution for Bridge-ResNet50
+####   Execution for MSENet-ResNet50
 ```
 python main.py --img example --out example_results --model resnet
 ```
 
-####   Execution for Bridge-Xception
+####   Execution for MSENet-Xception
 ```
 python main.py --img example --out example_results --model xception
 ```
