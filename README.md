@@ -1,11 +1,10 @@
 
-# MSENet: Bridge connected Network for beef marbling score estimation and eye-muscle area segmentation
+# MSENet: End-to-end network for the beef marbling score estimation of Korean native cattle
 
  
 ## Object
 
-We proposed the MSENet for end-to-end networks without any pre
-or post processing step, implementing segmentation of beef eye-muscle area and estimation of marblingscore.In particular, the bridge block in the MSENet interlinks a scoring module and segmentation module, trans-forming the segmentation information to scoring module for way to improve the estimation performance. We applied it to connect segmentation module with ResNet50 and Xception for automated beef MS grading. Bridge block is also simple to use for any other automated systems demanding both classification and segmentation task since it doesn’t need to create a new deep learning network but simply combines two existing networks.
+We propose the MSENet for end-to-end networks, which simultaneously performs marbling score estimation and eye muscle area segmentation. The proposed MSENet include a segmentation module, a bridge block, and a marbling scoring module. In particular, the segmentation module yields multi-scale attention maps for eye muscle area and the bridge block is transfers the multi-scale attentions maps to the scoring module. Unlike other previous approaches, MSENet is trained on a new large-scale beef image dataset (more than 10000), called a Hanwoo dataset.
 
 ##  Installation
 The pre-trained weight must exist as `resnet_weights.h5` and  `xception_weights.h5` in the path where `main.py` is located. pre-trained weight can be downloaded at https://drive.google.com/drive/folders/1E8x43bGvKinJRwiTPb-A6eOr9pMvvxDi.
