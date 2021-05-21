@@ -37,15 +37,20 @@ python main.py --img example --out example_results --model xception
 ## Model performance
 
 Model was trained by 8,201 beef images and ground truth mask and true MS,
-and test set contain 1,024 images.
+and test set contain 1,024 images. For MSENet-ResNet50, we design the convolution blocks in the scoring module by employing ResNet50 (He et al., 2016), while the structure of Xception (Chollet, 2017) is adopted for the convolution blocks in MSENet-Xception
 
   
 
 |model|Corr|mIOU|
 |-----|--------|----|
-|Bridge-ResNet50|0.95|0.973 |
-|Bridge-Xception|0.952|0.973 |
+|MSENet-ResNet50|0.95|0.973 |
+|MSENet-Xception|0.952|0.973 |
 
 ![joint_raw](https://user-images.githubusercontent.com/71325306/119126744-5e86e600-ba6e-11eb-8b07-1e6c155fa7e6.png)
 ![joint_results](https://user-images.githubusercontent.com/71325306/119126717-5464e780-ba6e-11eb-9a01-1dbb60e10e51.png)
+
+## Reference
+
+- He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. Proceedings of the IEEE conference on computer vision and pattern recognition, (pp. 770–778)
+- Chollet, F. (2017). Xception: Deep learning with depthwise separable convolutions. Proceedings of the IEEE conference on computer vision and pattern recognition, (pp. 1251–1258)
 
