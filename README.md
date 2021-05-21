@@ -1,3 +1,4 @@
+
 # MSENet: Bridge connected Network for beef marbling score estimation and eye-muscle area segmentation
 
  
@@ -10,7 +11,8 @@ or post processing step, implementing segmentation of beef eye-muscle area and e
 The pre-trained weight must exist as `resnet_weights.h5` and  `xception_weights.h5` in the path where `main.py` is located. pre-trained weight can be downloaded at https://drive.google.com/drive/folders/1E8x43bGvKinJRwiTPb-A6eOr9pMvvxDi.
 ## Model summary
 
-![AnyConv com__fig4](https://user-images.githubusercontent.com/71325306/109612220-b817fc80-7b72-11eb-81d8-d436edbb0b0a.png)
+![fig4](https://user-images.githubusercontent.com/71325306/119126888-9726bf80-ba6e-11eb-9b4f-794484b4b143.png)
+
   
 our models were implemented by **tensorflow 2.3** and **keras**
 
@@ -40,9 +42,11 @@ and test set contain 1,024 images.
 
   
 
-|model|+/-2 Acc|mIOU|
+|model|Corr|mIOU|
 |-----|--------|----|
-|Bridge-ResNet50|99.7%|0.973 |
-|Bridge-Xception|99.8%|0.973 |
+|Bridge-ResNet50|0.95|0.973 |
+|Bridge-Xception|0.952|0.973 |
 
-![AnyConv com__fig7](https://user-images.githubusercontent.com/71325306/109612244-c1a16480-7b72-11eb-807b-cfd8bb05f3fa.png)
+![joint_raw](https://user-images.githubusercontent.com/71325306/119126744-5e86e600-ba6e-11eb-8b07-1e6c155fa7e6.png)
+![joint_results](https://user-images.githubusercontent.com/71325306/119126717-5464e780-ba6e-11eb-9a01-1dbb60e10e51.png)
+
